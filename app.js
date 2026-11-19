@@ -23,7 +23,16 @@
     el.style.setProperty("--d", i * 0.1 + "s");
   });
 
+  // Red de seguridad: si el navegador no llega a avisar qué está en pantalla
+  // (pestaña en segundo plano, ahorro de batería…), mostramos todo sin animar.
+  // Una carta invisible es mucho peor que una carta sin animaciones.
+  var observerAlive = false;
+  setTimeout(function () {
+    if (!observerAlive) root.classList.remove("js");
+  }, 2500);
+
   var revealer = new IntersectionObserver(function (entries) {
+    observerAlive = true;
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
