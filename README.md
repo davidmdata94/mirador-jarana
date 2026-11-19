@@ -43,6 +43,8 @@ Luego abre http://localhost:8000 en el navegador.
 
 ## Notas técnicas
 
+- **Fotos:** las de ambiente vienen de [Unsplash](https://unsplash.com/license) (uso comercial gratis) y se cargan desde su CDN (`images.unsplash.com`), que entrega el tamaño y formato justo para cada pantalla. Para cambiar una foto, reemplaza el código `photo-…` en `index.html`.
+- **Animaciones:** solo CSS y un poco de JavaScript (`app.js`), sin React ni librerías externas. Se desactivan solas si el teléfono tiene activado "reducir movimiento".
 - **Fuentes:** Lobster, Oswald y Aleo (licencia SIL OFL) se cargan desde jsDelivr con versión fija.
 - **Seguridad:** `vercel.json` define una política de contenido (CSP) que solo permite scripts propios, fuentes de jsDelivr y el mapa de Google.
 - **El código QR** apunta a la dirección principal. Si cambias la dirección del sitio, hay que generar un QR nuevo.

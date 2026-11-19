@@ -24,6 +24,8 @@
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1680552507798-d046e6180ead?auto=format&fit=crop&w=1600&q=70" imagesrcset="https://images.unsplash.com/photo-1680552507798-d046e6180ead?auto=format&fit=crop&w=640&q=70 640w, https://images.unsplash.com/photo-1680552507798-d046e6180ead?auto=format&fit=crop&w=1024&q=70 1024w, https://images.unsplash.com/photo-1680552507798-d046e6180ead?auto=format&fit=crop&w=1600&q=70 1600w, https://images.unsplash.com/photo-1680552507798-d046e6180ead?auto=format&fit=crop&w=2200&q=70 2200w" imagesizes="100vw" fetchpriority="high">
   <!-- Precarga de las dos fuentes que se ven primero: evita el "salto" del texto -->
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fontsource/lobster@5.3.0/files/lobster-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fontsource/oswald@5.3.0/files/oswald-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -61,15 +63,26 @@
   </script>
 </head>
 <body>
+  <script>document.documentElement.classList.add('js')</script>
   <a class="skip-link" href="#picada">Saltar a la carta</a>
 
   <!-- ===================== ENCABEZADO ===================== -->
   <header class="hero" id="top">
-    <p class="hero-kicker">Gastro Bar</p>
-    <h1 class="hero-title">Mirador Jarana</h1>
-    <div class="hero-badge" aria-hidden="true">
-      <span class="flourish"></span><span>Menú</span><span class="flourish"></span>
+    <img class="hero-img" src="https://images.unsplash.com/photo-1680552507798-d046e6180ead?auto=format&amp;fit=crop&amp;w=1600&amp;q=70" srcset="https://images.unsplash.com/photo-1680552507798-d046e6180ead?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1680552507798-d046e6180ead?auto=format&amp;fit=crop&amp;w=1024&amp;q=70 1024w, https://images.unsplash.com/photo-1680552507798-d046e6180ead?auto=format&amp;fit=crop&amp;w=1600&amp;q=70 1600w, https://images.unsplash.com/photo-1680552507798-d046e6180ead?auto=format&amp;fit=crop&amp;w=2200&amp;q=70 2200w" sizes="100vw" alt="" fetchpriority="high" decoding="async" width="2200" height="1467">
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-kicker">Gastro Bar</p>
+      <h1 class="hero-title">Mirador Jarana</h1>
+      <div class="hero-badge" aria-hidden="true">
+        <span class="flourish"></span><span>Menú</span><span class="flourish"></span>
+      </div>
+      <p class="hero-tagline">Picadas y parrilla boyacense, a minutos de Villa de Leyva y Sáchica</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#picada">Ver la carta</a>
+        <a class="btn btn-ghost" href="https://wa.me/573228132804?text=Hola%20Mirador%20Jarana%2C%20vi%20el%20men%C3%BA%20en%20la%20web%20y%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">Escríbenos</a>
+      </div>
     </div>
+    <a class="scroll-cue" href="#picada" aria-label="Bajar a la carta"><span></span></a>
   </header>
 
   <!-- ===================== NAVEGACIÓN POR CATEGORÍAS ===================== -->
@@ -89,8 +102,13 @@
     <!-- ===================== COCINA (tema amarillo / óxido) ===================== -->
     <div class="theme t-cocina">
 
+      <figure class="banner reveal">
+        <img src="https://images.unsplash.com/photo-1750461325551-02b7ea57625a?auto=format&amp;fit=crop&amp;w=900&amp;q=70" srcset="https://images.unsplash.com/photo-1750461325551-02b7ea57625a?auto=format&amp;fit=crop&amp;w=600&amp;q=70 600w, https://images.unsplash.com/photo-1750461325551-02b7ea57625a?auto=format&amp;fit=crop&amp;w=900&amp;q=70 900w, https://images.unsplash.com/photo-1750461325551-02b7ea57625a?auto=format&amp;fit=crop&amp;w=1400&amp;q=70 1400w" sizes="(min-width: 1040px) 1040px, 100vw" alt="Chorizos y carne asándose sobre la parrilla" loading="lazy" decoding="async" width="1400" height="560">
+        <figcaption><span class="banner-title">Al carbón</span><span class="banner-text">Picadas al estilo boyacense, para compartir</span></figcaption>
+      </figure>
+
       <section id="picada" class="section" aria-labelledby="h-picada">
-        <h2 id="h-picada" class="section-title">Arma tu picada</h2>
+        <h2 id="h-picada" class="section-title reveal">Arma tu picada</h2>
         <p class="section-sub">Selecciona las porciones</p>
 
         <div class="cols cols-3">
@@ -134,7 +152,7 @@
 
       <div class="cols cols-2">
         <section id="entradas" class="section" aria-labelledby="h-entradas">
-          <h2 id="h-entradas" class="section-title">Entradas</h2>
+          <h2 id="h-entradas" class="section-title reveal">Entradas</h2>
           <ul class="items">
             <li class="item">
               <div class="row"><span class="name">Patacones Jarana</span><span class="leader"></span><data class="price" value="15000">$15.000</data></div>
@@ -152,7 +170,7 @@
         </section>
 
         <section id="parrilladas" class="section" aria-labelledby="h-parrilladas">
-          <h2 id="h-parrilladas" class="section-title">Parrilladas</h2>
+          <h2 id="h-parrilladas" class="section-title reveal">Parrilladas</h2>
           <ul class="items">
             <li class="item">
               <div class="row"><span class="name">Parrillada especial <small>· 2 personas</small></span><span class="leader"></span><data class="price" value="65000">$65.000</data></div>
@@ -169,11 +187,16 @@
 
     <!-- ===================== CORTES (tema oscuro / dorado) ===================== -->
     <div class="theme t-cortes">
+      <figure class="banner reveal banner-dark">
+        <img src="https://images.unsplash.com/photo-1558030137-d464dd688b00?auto=format&amp;fit=crop&amp;w=900&amp;q=70" srcset="https://images.unsplash.com/photo-1558030137-d464dd688b00?auto=format&amp;fit=crop&amp;w=600&amp;q=70 600w, https://images.unsplash.com/photo-1558030137-d464dd688b00?auto=format&amp;fit=crop&amp;w=900&amp;q=70 900w, https://images.unsplash.com/photo-1558030137-d464dd688b00?auto=format&amp;fit=crop&amp;w=1400&amp;q=70 1400w" sizes="(min-width: 1040px) 1040px, 100vw" alt="Carne asándose sobre las brasas" loading="lazy" decoding="async" width="1400" height="560">
+        <figcaption><span class="banner-title">A la brasa</span><span class="banner-text">Cortes madurados, sellados al fuego</span></figcaption>
+      </figure>
+
       <section id="cortes" class="section" aria-labelledby="h-cortes">
         <p class="premium" aria-hidden="true">★ Premium quality ★</p>
-        <h2 id="h-cortes" class="section-title">Cortes seleccionados</h2>
+        <h2 id="h-cortes" class="section-title reveal">Cortes seleccionados</h2>
 
-        <article class="featured">
+        <article class="featured reveal">
           <div class="row"><h3 class="name">Tabla Jarana</h3><span class="leader"></span><data class="price" value="48000">$48.000</data></div>
           <p class="desc">150 g de churrasco con chimichurri, 150 g de lomo de cerdo con piña asada y 150 g de pechuga de pollo en salsa de champiñones.</p>
         </article>
@@ -213,8 +236,13 @@
 
     <!-- ===================== BEBIDAS (tema beige / carmesí) ===================== -->
     <div class="theme t-bebidas">
+      <figure class="banner reveal">
+        <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&amp;fit=crop&amp;w=900&amp;q=70" srcset="https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&amp;fit=crop&amp;w=600&amp;q=70 600w, https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&amp;fit=crop&amp;w=900&amp;q=70 900w, https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&amp;fit=crop&amp;w=1400&amp;q=70 1400w" sizes="(min-width: 1040px) 1040px, 100vw" alt="Jarra de cerveza fría con espuma" loading="lazy" decoding="async" width="1400" height="560">
+        <figcaption><span class="banner-title">Bien fría</span><span class="banner-text">Para acompañar la picada, como se hace en Boyacá</span></figcaption>
+      </figure>
+
       <section id="bebidas" class="section" aria-labelledby="h-bebidas">
-        <h2 id="h-bebidas" class="section-title">Bebidas</h2>
+        <h2 id="h-bebidas" class="section-title reveal">Bebidas</h2>
 
         <div class="cols cols-2">
           <div class="group">
@@ -282,8 +310,13 @@
 
     <!-- ===================== CAFETERÍA (tema café) ===================== -->
     <div class="theme t-cafe">
+      <figure class="banner reveal banner-dark">
+        <img src="https://images.unsplash.com/photo-1672851612794-6687bf0bf1a3?auto=format&amp;fit=crop&amp;w=900&amp;q=70" srcset="https://images.unsplash.com/photo-1672851612794-6687bf0bf1a3?auto=format&amp;fit=crop&amp;w=600&amp;q=70 600w, https://images.unsplash.com/photo-1672851612794-6687bf0bf1a3?auto=format&amp;fit=crop&amp;w=900&amp;q=70 900w, https://images.unsplash.com/photo-1672851612794-6687bf0bf1a3?auto=format&amp;fit=crop&amp;w=1400&amp;q=70 1400w" sizes="(min-width: 1040px) 1040px, 100vw" alt="Rama de cafeto con granos de café" loading="lazy" decoding="async" width="1400" height="560">
+        <figcaption><span class="banner-title">Café colombiano</span><span class="banner-text">Espresso, capuchinos y amasijos de la casa</span></figcaption>
+      </figure>
+
       <section id="cafeteria" class="section" aria-labelledby="h-cafeteria">
-        <h2 id="h-cafeteria" class="section-title">Cafetería</h2>
+        <h2 id="h-cafeteria" class="section-title reveal">Cafetería</h2>
 
         <div class="cols cols-2">
           <div class="group">
@@ -344,16 +377,21 @@
     </div>
     <!-- ===================== VISÍTANOS (horario, contacto, mapa) ===================== -->
     <div class="theme t-info">
+      <figure class="banner reveal">
+        <img src="https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?auto=format&amp;fit=crop&amp;w=900&amp;q=70" srcset="https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?auto=format&amp;fit=crop&amp;w=600&amp;q=70 600w, https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?auto=format&amp;fit=crop&amp;w=900&amp;q=70 900w, https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?auto=format&amp;fit=crop&amp;w=1400&amp;q=70 1400w" sizes="(min-width: 1040px) 1040px, 100vw" alt="Persona sobre una roca mirando el atardecer en Villa de Leyva" loading="lazy" decoding="async" width="1400" height="560">
+        <figcaption><span class="banner-title">Ven al mirador</span><span class="banner-text">Comida boyacense con vista a las montañas</span></figcaption>
+      </figure>
+
       <section id="visitanos" class="section" aria-labelledby="h-visitanos">
-        <h2 id="h-visitanos" class="section-title">Visítanos</h2>
+        <h2 id="h-visitanos" class="section-title reveal">Visítanos</h2>
 
         <div class="cols cols-2 info-grid">
           <div class="info-cards">
-            <div class="info-card">
+            <div class="info-card reveal">
               <h3 class="group-title">Horario</h3>
               <p class="info-big">12:30 p.&nbsp;m. – 4:30 p.&nbsp;m.</p>
             </div>
-            <div class="info-card">
+            <div class="info-card reveal">
               <h3 class="group-title">Contacto</h3>
               <div class="btns">
                 <a class="btn btn-wa" href="https://wa.me/573228132804?text=Hola%20Mirador%20Jarana%2C%20vi%20el%20men%C3%BA%20en%20la%20web%20y%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">
@@ -372,12 +410,20 @@
             </div>
           </div>
 
-          <div class="map">
+          <div class="map reveal">
             <iframe title="Ubicación de Mirador Jarana en Google Maps"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.6561900862303!2d-73.5677536!3d5.617679199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e41d19c6b74701d%3A0x2af18bf0162fd40a!2sMirador%20Jarana!5e0!3m2!1ses-419!2sco!4v1795037795421!5m2!1ses-419!2sco"
               loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
+
+        <h3 class="gallery-title reveal">Nuestra tierra</h3>
+        <ul class="gallery" aria-label="Fotos de Villa de Leyva y Boyacá">
+          <li><img src="https://images.unsplash.com/photo-1610396774961-7426ecd9346c?auto=format&amp;fit=crop&amp;w=600&amp;q=70" srcset="https://images.unsplash.com/photo-1610396774961-7426ecd9346c?auto=format&amp;fit=crop&amp;w=400&amp;q=70 400w, https://images.unsplash.com/photo-1610396774961-7426ecd9346c?auto=format&amp;fit=crop&amp;w=600&amp;q=70 600w, https://images.unsplash.com/photo-1610396774961-7426ecd9346c?auto=format&amp;fit=crop&amp;w=900&amp;q=70 900w" sizes="(min-width: 720px) 25vw, 70vw" alt="Iglesia en la Plaza Mayor de Villa de Leyva" loading="lazy" decoding="async" width="600" height="450"></li>
+          <li><img src="https://images.unsplash.com/photo-1604074154455-2e5cf522b36c?auto=format&amp;fit=crop&amp;w=600&amp;q=70" srcset="https://images.unsplash.com/photo-1604074154455-2e5cf522b36c?auto=format&amp;fit=crop&amp;w=400&amp;q=70 400w, https://images.unsplash.com/photo-1604074154455-2e5cf522b36c?auto=format&amp;fit=crop&amp;w=600&amp;q=70 600w, https://images.unsplash.com/photo-1604074154455-2e5cf522b36c?auto=format&amp;fit=crop&amp;w=900&amp;q=70 900w" sizes="(min-width: 720px) 25vw, 70vw" alt="Calle empedrada con casas blancas en Villa de Leyva" loading="lazy" decoding="async" width="600" height="450"></li>
+          <li><img src="https://images.unsplash.com/photo-1683425079756-16c21af6dcd9?auto=format&amp;fit=crop&amp;w=600&amp;q=70" srcset="https://images.unsplash.com/photo-1683425079756-16c21af6dcd9?auto=format&amp;fit=crop&amp;w=400&amp;q=70 400w, https://images.unsplash.com/photo-1683425079756-16c21af6dcd9?auto=format&amp;fit=crop&amp;w=600&amp;q=70 600w, https://images.unsplash.com/photo-1683425079756-16c21af6dcd9?auto=format&amp;fit=crop&amp;w=900&amp;q=70 900w" sizes="(min-width: 720px) 25vw, 70vw" alt="Quebrada entre casas coloniales de Villa de Leyva" loading="lazy" decoding="async" width="600" height="450"></li>
+          <li><img src="https://images.unsplash.com/photo-1700107415046-abfb2feb7d9c?auto=format&amp;fit=crop&amp;w=600&amp;q=70" srcset="https://images.unsplash.com/photo-1700107415046-abfb2feb7d9c?auto=format&amp;fit=crop&amp;w=400&amp;q=70 400w, https://images.unsplash.com/photo-1700107415046-abfb2feb7d9c?auto=format&amp;fit=crop&amp;w=600&amp;q=70 600w, https://images.unsplash.com/photo-1700107415046-abfb2feb7d9c?auto=format&amp;fit=crop&amp;w=900&amp;q=70 900w" sizes="(min-width: 720px) 25vw, 70vw" alt="Casa campesina en las montañas de Boyacá" loading="lazy" decoding="async" width="600" height="450"></li>
+        </ul>
       </section>
     </div>
   </main>
@@ -385,6 +431,7 @@
   <footer class="footer">
     <p class="footer-brand">Mirador Jarana</p>
     <p>Precios en pesos colombianos (COP).</p>
+    <p class="credits">Fotos de ambiente: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</p>
     <a class="to-top" href="#top" aria-label="Volver arriba">↑ Volver arriba</a>
   </footer>
 
