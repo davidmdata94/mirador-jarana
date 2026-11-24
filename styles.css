@@ -326,7 +326,7 @@ a { color: inherit; }
 /* "Ven al mirador": foto propia más alta para que quepan montañas y letrero; texto arriba para no tapar el letrero */
 .banner-mirador { height: clamp(220px, 56vw, 560px); }
 .banner-mirador img { object-position: 50% 70%; }
-.banner-mirador::after { background: linear-gradient(180deg, rgba(30,14,6,.75) 0%, rgba(30,14,6,.25) 35%, rgba(30,14,6,0) 55%); }
+.banner-mirador::after { background: linear-gradient(180deg, rgba(30,14,6,.6) 0%, rgba(30,14,6,.15) 30%, rgba(30,14,6,0) 45%); }
 .banner-mirador figcaption { top: clamp(1rem, 4vw, 1.8rem); bottom: auto; }
 
 /* ---------- Galería "Nuestra tierra" ---------- */
